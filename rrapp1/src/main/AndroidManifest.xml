@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.raptorsrepublic.myrrapp.rrapp1"
+    android:icon="@drawable/app_icon"
+    android:label="@string/app_name" >
+
+    <!-- Include next permission if you want to allow UIL to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.raptorsrepublic.myrrapp.rrapp1.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat" >
+
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.BlogPostActivity"
+            android:parentActivityName="com.raptorsrepublic.myrrapp.rrapp1.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.raptorsrepublic.myrrapp.rrapp1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.WebArticlesFragment"
+            android:label="@string/title_activity_web_articles"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.UpcomingGamesFragment"
+            android:label="@string/title_activity_upcoming_games_fragment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.WebArticleActivity"
+            android:label="@string/title_activity_web_article"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.GameResultsFragment"
+            android:label="@string/title_activity_results_fragment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.GenericWebViewActivity"
+            android:label="@string/title_activity_generic_web_view"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.raptorsrepublic.myrrapp.rrapp1.BoxScoreActivity"
+            android:label="@string/title_activity_box_score" >
+        </activity>
+    </application>
+
+</manifest>
